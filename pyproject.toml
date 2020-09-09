@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "hellotoga"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://example.com/hellotoga"
+license = "BSD license"
+author = 'Jane Developer'
+author_email = "jane@example.com"
+
+[tool.briefcase.app.hellotoga]
+formal_name = "hellotoga"
+description = "My first application"
+icon = "src/hellotoga/resources/hellotoga"
+sources = ['src/hellotoga']
+requires = []
+
+
+[tool.briefcase.app.hellotoga.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.hellotoga.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.hellotoga.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.hellotoga.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.hellotoga.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
